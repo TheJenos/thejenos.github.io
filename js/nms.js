@@ -31,12 +31,11 @@ function replx(wat,time,item,val){
 }
 $(document).ready(function(){
 	var item = "txt";
-	rtime = Math.round((Math.random()*8));
+	rtime = Math.round((Math.random()*20));
 	for(var x = 1;x<=rtime;x++){
 		setTimeout(function(){
 			rr = Math.round((Math.random()*5000));
 			replx(count,0,item,rr);
-			console.log(new Date());
 		},1000*x);
 	}
 	setTimeout(function(){
