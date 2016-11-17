@@ -31,24 +31,15 @@ function replx(wat,time,item,val){
 }
 $(document).ready(function(){
 	var item = "txt";
-	rtime = Math.round((Math.random()*10));
-	//rlet = Math.round((Math.random()*26));
-	rlet = 0;
-	//update(item,0);
-	replx(count,0,item,350);
+	rtime = Math.round((Math.random()*8));
+	for(var x = 1;x<=rtime;x++){
+		setTimeout(function(){
+			rr = Math.round((Math.random()*5000));
+			replx(count,0,item,rr);
+			console.log(new Date());
+		},1000*x);
+	}
 	setTimeout(function(){
-			replx(count,0,item,100);
-	},1000);
-	setTimeout(function(){
-			replx(count,0,item,750);
-	},2000);
-	setTimeout(function(){
-			replx(count,0,item,450);
-	},3000);
-	setTimeout(function(){
-			replx(count,0,item,950);
-	},4000);
-	setTimeout(function(){
-			replx(count,10,item,95);
-	},5000);
+			replx(count,1,item,95);
+	},1000*x);
 });
